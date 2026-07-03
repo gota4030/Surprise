@@ -73,6 +73,6 @@ yesBtn.addEventListener("click", () => {
 setTimeout(() => {
 
     // pequeno tempo para a pessoa "sentir" a cena
-    window.location.href = "final.html";
+    window.location.href = "Final.html";
 
 }, 20000); // 20 segundos
