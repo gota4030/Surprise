@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/heart.jpg");
+    background-image: url("heart.jpg");
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -52,7 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../img/window.png");
+    background-image: url("window.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
