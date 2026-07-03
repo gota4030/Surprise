@@ -12,7 +12,7 @@ function entrar(){
         fade.classList.add("active");
 
         setTimeout(()=>{
-            window.location.href = "Carta.html";
+            window.location.href = "carta.html";
         },1500);
 
     } else {
