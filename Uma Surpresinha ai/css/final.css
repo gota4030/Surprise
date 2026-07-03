@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    color:white;
+    font-family:Arial;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    z-index:2;
+}
+
+h1{
+    font-size:40px;
+    color:#ff4d6d;
+}
+
+p{
+    font-size:18px;
+    opacity:0.8;
+}
+
+/* FOGOS */
+.firework{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:white;
+    border-radius:50%;
+    animation:boom 1s ease-out forwards;
+}
+
+@keyframes boom{
+    0%{transform:scale(1); opacity:1;}
+    100%{transform:scale(25); opacity:0;}
+}

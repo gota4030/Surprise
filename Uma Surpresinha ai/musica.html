@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa Música ❤️</title>
+  <link rel="icon" type="image/png" href="img/amar2.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/musica.css" />
+</head>
+<body>
+
+  <!-- Fundo animado: gradiente + partículas + corações -->
+  <div class="bg-gradient"></div>
+  <div class="bg-blur"></div>
+  <canvas id="particles"></canvas>
+  <div id="hearts" class="hearts-layer"></div>
+
+  <!-- =================== TELA INICIAL =================== -->
+  <section id="intro" class="screen active">
+    <div class="card glass intro-card">
+      <div class="intro-heart">❤️ <span>Nossa Música</span> ❤️</div>
+      <h1 class="song-title-big">100 Years</h1>
+      <p class="song-artist-big">John Michael Howell</p>
+      <p class="intro-text">"Preparei este momento especialmente para você."</p>
+      <button id="startBtn" class="btn-primary">❤️ Iniciar</button>
+    </div>
+  </section>
+
+  <!-- =================== PLAYER =================== -->
+  <section id="player" class="screen">
+    <div class="player-wrapper glass">
+      <!-- Capa giratória -->
+      <div class="cover-wrap">
+        <div id="cover" class="cover">
+          <div class="cover-inner">❤</div>
+        </div>
+      </div>
+
+      <!-- Infos -->
+      <div class="track-info">
+        <h2 class="track-title">100 Years</h2>
+        <p class="track-artist">John Michael Howell</p>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div class="progress-block">
+        <div id="progressBar" class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+          <div id="progressThumb" class="progress-thumb"></div>
+        </div>
+        <div class="time-row">
+          <span id="currentTime">0:00</span>
+          <span id="totalTime">0:00</span>
+        </div>
+      </div>
+
+      <!-- Controles -->
+      <div class="controls">
+        <button id="playBtn" class="play-btn" aria-label="Play/Pause">
+          <svg id="iconPlay" viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          <svg id="iconPause" viewBox="0 0 24 24" width="28" height="28" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TELA FINAL =================== -->
+  <section id="ending" class="screen">
+    <div class="card glass ending-card">
+      <div class="big-heart">❤️</div>
+      <p id="endText1" class="ending-text">"Espero que essa música tenha conseguido mostrar um pouquinho do que sinto por você."</p>
+      <p id="endText2" class="ending-text" style="opacity:0;">"Mas ainda existe uma última surpresa..."</p>
+      <button id="continueBtn" class="btn-primary" style="opacity:0; pointer-events:none;">Continuar ❤️</button>
+    </div>
+  </section>
+
+  <!-- Áudio -->
+  <audio id="audio" src="audio/John Michael Howell - 100 Years [OFFICIAL LYRIC VIDEO].mp3" preload="auto"></audio>
+
+  <script src="js/musica.js"></script>
+</body>
+</html>
